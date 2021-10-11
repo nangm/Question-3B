@@ -18,4 +18,4 @@ spec:
         - name: RABBITMQ_HOST
           value: "rabbitmq"
         - name: RABBITMQ_PORT
-          value: "5672"
+          value: "31672"
