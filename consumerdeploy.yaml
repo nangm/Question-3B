@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumerrabbitmq
+spec:
+  selector:
+    matchLabels:
+      app: consumerrabbitmq
+  template:
+    metadata:
+      labels:
+        app: consumerrabbitmq
+    spec:
+      containers:
+      - name: consumerrabbitmq
+        image: nangm/consumerrabbitmq:latest
+        env:
+        - name: RABBITMQ_HOST
+          value: "rabbitmq"
+        - name: RABBITMQ_PORT
+          value: "5672"
